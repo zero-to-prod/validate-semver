@@ -2,6 +2,8 @@
 
 namespace Zerotoprod\ValidateSemVer;
 
+use Zerotoprod\SemverRegex\SemverRegex;
+
 class ValidateSemVer
 {
     /**
@@ -13,21 +15,6 @@ class ValidateSemVer
      */
     public static function isValid($version): bool
     {
-        return is_string($version)
-            && preg_match(
-                '/^(?P<major>0|[1-9]\d*)\.'
-                .'(?P<minor>0|[1-9]\d*)\.'
-                .'(?P<patch>0|[1-9]\d*)'
-                .'(?:-'
-                .'(?P<prerelease>'
-                .'(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)'
-                .'(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*'
-                .'))?'
-                .'(?:\+'
-                .'(?P<buildmetadata>'
-                .'[0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*'
-                .'))?$/',
-                $version
-            ) === 1;
+        return is_string($version) && preg_match(SemverRegex::pattern, $version) === 1;
     }
 }
