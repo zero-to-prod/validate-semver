@@ -2,7 +2,7 @@
 
 namespace Zerotoprod\ValidateSemVer;
 
-use Zerotoprod\SemverRegex\SemverRegex;
+use Zerotoprod\RegexSemver\RegexSemver;
 
 class ValidateSemVer
 {
@@ -15,6 +15,6 @@ class ValidateSemVer
      */
     public static function isValid($version): bool
     {
-        return is_string($version) && preg_match(SemverRegex::pattern, $version) === 1;
+        return is_string($version) && preg_match(RegexSemver::pattern, $version) === 1;
     }
 }
