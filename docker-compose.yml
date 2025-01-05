@@ -174,3 +174,9 @@ services:
       target: composer
     volumes:
       - ./:/app
+
+networks:
+  default:
+    driver: bridge
+    labels:
+      auto-remove: "true"
