@@ -8,6 +8,13 @@
     "validate-semver"
   ],
   "homepage": "https://github.com/zero-to-prod/validate-semver",
+  "support": {
+    "email": "dave0016@gmail.com",
+    "issues": "https://github.com/zero-to-prod/validate-semver/issues",
+    "source": "https://github.com/zero-to-prod/validate-semver",
+    "docs": "https://zero-to-prod.github.io/validate-semver",
+    "security": "https://github.com/zero-to-prod/validate-semver/blob/main/SECURITY.md"
+  },
   "license": "MIT",
   "readme": "./README.md",
   "authors": [
