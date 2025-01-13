@@ -33,7 +33,8 @@
   ],
   "require": {
     "php": ">=7.1",
-    "zero-to-prod/regex-semver": "^71.0"
+    "zero-to-prod/regex-semver": "^71.0",
+    "zero-to-prod/dock": "^1.0"
   },
   "autoload": {
     "psr-4": {
