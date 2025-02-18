@@ -4,6 +4,11 @@ namespace Zerotoprod\ValidateSemVer;
 
 use Zerotoprod\RegexSemver\RegexSemver;
 
+/**
+ * Validates a SemVer String
+ *
+ * @link https://github.com/zero-to-prod/validate-semver
+ */
 class ValidateSemVer
 {
     /**
@@ -12,6 +17,7 @@ class ValidateSemVer
      * @param  mixed  $version
      *
      * @return bool
+     * @link https://github.com/zero-to-prod/validate-semver
      */
     public static function isValid($version): bool
     {
